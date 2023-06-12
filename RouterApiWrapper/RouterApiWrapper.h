@@ -2,17 +2,21 @@
 
 #include "RouterApi.hpp"
 
+#include <msclr/marshal_cppstd.h>
+
 using namespace System;
 
 namespace RouterApiWrapper {
 	public ref class RouterApiWrapperClass
 	{
 	public:
-		void AddRouter() {
-			std::string ipStr = "127.0.0.1";
+		int AddRouter(System::String^ ip) {
 
-			Vapi::AddRouter(ipStr);
+			std::string ipStr = msclr::interop::marshal_as<std::string>(ip);
+			int result;
 
+			result = Vapi::AddRouter(ipStr);
+			return result;
 		}
 	};
 }
