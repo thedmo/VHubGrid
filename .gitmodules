@@ -1,0 +1,3 @@
+[submodule ".\\VideohubRoutingCli"]
+	path = .\\VideohubRoutingCli
+	url = https://github.com/thedmo/VideohubRoutingCli.git
