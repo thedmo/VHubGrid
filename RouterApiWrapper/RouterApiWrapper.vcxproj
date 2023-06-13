@@ -92,8 +92,16 @@
       <AdditionalLibraryDirectories>$(SolutionDir)VideohubRoutingCli\Installs\Libs;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
     <PreBuildEvent>
-      <Message>$(SolutionDir)SetupLibrariesDebug.bat</Message>
+      <Message>Setup Libraries</Message>
+      <Command>cd $(SolutionDir)
+call $(SolutionDir)SetupLibrariesDebug.bat</Command>
     </PreBuildEvent>
+    <PostBuildEvent>
+      <Command>cd $(SolutionDir)
+call $(SolutionDir)GetVideohubSimulator.bat
+</Command>
+      <Message>Get Simulator for testing</Message>
+    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
