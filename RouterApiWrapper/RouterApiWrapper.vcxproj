@@ -91,6 +91,9 @@
       <AdditionalDependencies>RouterApi_lib.lib;TelnetClient_lib.lib;sql_interface_lib.lib;sql_access_lib.lib;sqlite3_lib.lib;whereami_lib.lib</AdditionalDependencies>
       <AdditionalLibraryDirectories>$(SolutionDir)VideohubRoutingCli\Installs\Libs;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
+    <PreBuildEvent>
+      <Message>$(SolutionDir)SetupLibrariesDebug.bat</Message>
+    </PreBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -107,6 +110,9 @@
       <AdditionalDependencies>RouterApi_lib.lib;TelnetClient_lib.lib;sql_interface_lib.lib;sql_access_lib.lib;sqlite3_lib.lib;whereami_lib.lib</AdditionalDependencies>
       <AdditionalLibraryDirectories>$(SolutionDir)VideohubRoutingCli\Installs\Libs;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
+    <PreBuildEvent>
+      <Message>$(SolutionDir)Setup</Message>
+    </PreBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
@@ -123,6 +129,9 @@
       <AdditionalDependencies>RouterApi_lib.lib;TelnetClient_lib.lib;sql_interface_lib.lib;sql_access_lib.lib;sqlite3_lib.lib;whereami_lib.lib</AdditionalDependencies>
       <AdditionalLibraryDirectories>$(SolutionDir)VideohubRoutingCli\Installs\Libs;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
+    <PreBuildEvent>
+      <Message>$(SolutionDir)Setup</Message>
+    </PreBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
@@ -139,6 +148,9 @@
       <AdditionalDependencies>RouterApi_lib.lib;TelnetClient_lib.lib;sql_interface_lib.lib;sql_access_lib.lib;sqlite3_lib.lib;whereami_lib.lib</AdditionalDependencies>
       <AdditionalLibraryDirectories>$(SolutionDir)VideohubRoutingCli\Installs\Libs;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
+    <PreBuildEvent>
+      <Message>$(SolutionDir)SetupLibrariesRelease.bat</Message>
+    </PreBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="pch.h" />
