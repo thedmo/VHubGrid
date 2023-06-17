@@ -98,7 +98,7 @@ call $(SolutionDir)SetupLibrariesDebug.bat</Command>
     </PreBuildEvent>
     <PostBuildEvent>
       <Command>cd $(SolutionDir)
-call $(SolutionDir)GetVideohubSimulator.bat
+powershell.exe -ExecutionPolicy Bypass -File $(SolutionDir)GetSimulator.ps1
 </Command>
       <Message>Get Simulator for testing</Message>
     </PostBuildEvent>
