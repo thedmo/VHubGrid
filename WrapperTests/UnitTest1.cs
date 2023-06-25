@@ -8,11 +8,13 @@ namespace WrapperTests
     public class UnitTest1
     {
         [TestMethod]
-        public void TestMethod1()
+        public void AddNewRouter()
         {
-                   
+            RouterApiWrapperClass routerApiWrapper = new RouterApiWrapperClass();
+            int result = routerApiWrapper.AddRouter("127.0.0.1");
 
-            Assert.AreEqual(1, 1);
+            Assert.AreEqual(0, result);
+
         }
     }
 }
